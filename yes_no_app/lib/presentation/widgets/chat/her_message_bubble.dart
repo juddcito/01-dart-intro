@@ -5,7 +5,6 @@ class HerMessageBubble extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final colors = Theme.of(context).colorScheme;
 
     return Column(
@@ -22,10 +21,31 @@ class HerMessageBubble extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(height: 5)
+
+        const SizedBox(height: 5),
+
+        const _ImageBubble(),
+
+        const SizedBox(
+          height: 10,
+        )
 
         // Todo: imagen
       ],
     );
+  }
+}
+
+class _ImageBubble extends StatelessWidget {
+  const _ImageBubble({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
+    return ClipRRect(
+        borderRadius: BorderRadius.circular(20),
+        child: Image.network(
+            'https://yesno.wtf/assets/yes/12-e4f57c8f172c51fdd983c2837349f853.gif'),);
   }
 }
