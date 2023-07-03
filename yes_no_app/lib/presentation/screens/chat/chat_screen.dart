@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yes_no_app/presentation/widgets/chat/her_message_bubble.dart';
 import 'package:yes_no_app/presentation/widgets/chat/my_message_bubble.dart';
+import 'package:yes_no_app/presentation/widgets/shared/message_field_box.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});
@@ -13,10 +14,10 @@ class ChatScreen extends StatelessWidget {
           padding: EdgeInsets.all(4.0),
           child: CircleAvatar(
             backgroundImage: NetworkImage(
-                'https://64.media.tumblr.com/13f2b32ca1910eaaa32923af309247b8/20cdf3e1aa04bf87-dc/s400x600/2923aba36268703d14e647f0e4647398d95469b9.png'),
+                'https://cdn.icon-icons.com/icons2/933/PNG/512/round-account-button-with-user-inside_icon-icons.com_72596.png'),
           ),
         ),
-        title: const Text('Crush'),
+        title: const Text('Pedro Pérez'),
         centerTitle: false,
       ),
       body: _ChatView(),
@@ -43,7 +44,9 @@ class _ChatView extends StatelessWidget {
                 const MyMessageBubble();
               },
             )),
-            Text('Mundo')
+            
+            // Caja de texto de mensajes
+            const MessageFieldBox(),
           ],
         ),
       ),
