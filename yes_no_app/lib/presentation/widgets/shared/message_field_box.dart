@@ -24,7 +24,7 @@ class MessageFieldBox extends StatelessWidget {
         onPressed: () {
           // Tomar el valor de una caja de texto
           final textValue = textController.value.text;
-          print('Button: $textValue');
+          print('Buttons: $textValue');
           // Limpiar la caja de texto
           textController.clear();
         },
