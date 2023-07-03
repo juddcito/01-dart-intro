@@ -26,9 +26,7 @@ class HerMessageBubble extends StatelessWidget {
 
         const _ImageBubble(),
 
-        const SizedBox(
-          height: 10,
-        )
+        const SizedBox(height: 10)
 
         // Todo: imagen
       ],
@@ -46,6 +44,10 @@ class _ImageBubble extends StatelessWidget {
     return ClipRRect(
         borderRadius: BorderRadius.circular(20),
         child: Image.network(
-            'https://yesno.wtf/assets/yes/12-e4f57c8f172c51fdd983c2837349f853.gif'),);
+            'https://yesno.wtf/assets/yes/12-e4f57c8f172c51fdd983c2837349f853.gif',
+            width: size.width * 0.7,
+            height: 150,
+            fit: BoxFit.cover
+            ));
   }
 }
